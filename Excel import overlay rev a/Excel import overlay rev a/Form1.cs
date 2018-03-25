@@ -28,7 +28,7 @@ namespace Excel_import_overlay_rev_a
         private DialogResult result = new DialogResult();
         private bool parameterFilesAvailable = false;
         private bool impulseFilesAvailable = false;
-        private string impulseFolder;
+        private string folderProject;
         // Variables migrated from console application
         string[] stringSeparator = { "  ", "   ", "\t", "\t\t", " \t", "  \t" };
         //string[] wsNames = { "control", "10", "0.1", "100", "0.01", "1000", "0.001" };
@@ -59,15 +59,14 @@ namespace Excel_import_overlay_rev_a
                 System.Windows.Forms.MessageBox.Show("Ready to do stuff with passed files", "Message");
                 for (int pp = 0; pp < 4; pp++)
                 {
-                    //solution control-impulse set folder
-                    //string impulseFolder = controlFolder + "\\Impulses" + (pp + 1) + "_" + impulseFolders[pp];
+ 
                     //string folderProject = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\F7Res_TreatmentStrtegy";
-                   // START HERE
+                   //
                     //tring folderProject = impulseFbd.SelectedPath;
                     string template = folderProject + "\\template.xlsx";
                     var wb = new XLWorkbook(template);
                     var wsheets = wb.Worksheets;
-                    var files = Directory.GetFiles(impulseFolder);
+                    var files = Directory.GetFiles(folderProject);
 
                     //worksheet names in the Excel template
                     wsNamesOriginal = new string[4];
@@ -211,7 +210,7 @@ namespace Excel_import_overlay_rev_a
 
     }
 
-    //          IMPULSE
+    //          new projectFolder
     private void openFolderButton_Click(object sender, EventArgs e)
     {
         using (var impulseFbd = new FolderBrowserDialog())
@@ -224,7 +223,7 @@ namespace Excel_import_overlay_rev_a
 
                 System.Windows.Forms.MessageBox.Show("Files found: " + files.Length.ToString(), "Message");
                 System.Windows.Forms.MessageBox.Show("Folder Path: " + impulseFbd.SelectedPath.ToString(), "Message");
-                folderProject = impulseFbd.SelectedPath;
+                folderProject = impulseFbd.SelectedPath.ToString();
                 System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(impulseFbd.SelectedPath);
                 System.IO.FileSystemInfo[] impulseFiles = di.GetFileSystemInfos();
                 impulseCheckedListBox1.Items.AddRange(impulseFiles);

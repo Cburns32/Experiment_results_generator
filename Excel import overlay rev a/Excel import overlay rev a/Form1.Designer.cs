@@ -67,7 +67,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.openImpulsesFolderButton = new System.Windows.Forms.Button();
+            this.OpenFolderButton = new System.Windows.Forms.Button();
             this.openParametersFolderButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.impulseCheckedListBox1 = new System.Windows.Forms.CheckedListBox();
@@ -453,25 +453,16 @@
             // 
             this.folderBrowserDialog1.SelectedPath = "C:\\Users\\Christian\\Desktop";
             // 
-            // openImpulsesFolderButton
+            // OpenFolderButton
             // 
-            this.openImpulsesFolderButton.Location = new System.Drawing.Point(168, 401);
-            this.openImpulsesFolderButton.Name = "openImpulsesFolderButton";
-            this.openImpulsesFolderButton.Size = new System.Drawing.Size(75, 23);
-            this.openImpulsesFolderButton.TabIndex = 61;
-            this.openImpulsesFolderButton.Text = "Open Folder";
-            this.openImpulsesFolderButton.UseVisualStyleBackColor = true;
-            this.openImpulsesFolderButton.Click += new System.EventHandler(this.openFolderButton_Click);
-            // 
-            // openParametersFolderButton
-            // 
-            this.openParametersFolderButton.Location = new System.Drawing.Point(389, 406);
-            this.openParametersFolderButton.Name = "openParametersFolderButton";
-            this.openParametersFolderButton.Size = new System.Drawing.Size(75, 23);
-            this.openParametersFolderButton.TabIndex = 62;
-            this.openParametersFolderButton.Text = "Open Folder";
-            this.openParametersFolderButton.UseVisualStyleBackColor = true;
-            this.openParametersFolderButton.Click += new System.EventHandler(this.openParametersFolderButton_Click);
+            this.OpenFolderButton.Location = new System.Drawing.Point(168, 401);
+            this.OpenFolderButton.Name = "OpenFolderButton";
+            this.OpenFolderButton.Size = new System.Drawing.Size(75, 23);
+            this.OpenFolderButton.TabIndex = 61;
+            this.OpenFolderButton.Text = "Open Folder";
+            this.OpenFolderButton.UseVisualStyleBackColor = true;
+            this.OpenFolderButton.Click += new System.EventHandler(this.openFolderButton_Click);
+            
             // 
             // label2
             // 
@@ -513,7 +504,7 @@
             this.Controls.Add(this.impulseCheckedListBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.openParametersFolderButton);
-            this.Controls.Add(this.openImpulsesFolderButton);
+            this.Controls.Add(this.OpenFolderButton);
             this.Controls.Add(this.fileLabel1);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.label4);
@@ -602,7 +593,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Button openImpulsesFolderButton;
+        private System.Windows.Forms.Button OpenFolderButton;
         private System.Windows.Forms.Button openParametersFolderButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckedListBox impulseCheckedListBox1;

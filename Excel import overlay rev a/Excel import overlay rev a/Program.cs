@@ -18,8 +18,6 @@ namespace Excel_import_overlay_rev_a
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-
-            //         // ListFiles(); //(ref folderProjects, ref fileNames, ref fileCount);
         }
     }
 
